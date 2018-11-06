@@ -1,6 +1,9 @@
 pipeline {
     agent none
     stages {
+        stage('SCM Checkout'){
+           git 'https://github.com/dileepgudivada/simple-python-pyinstaller-app'
+        }
         stage('Build') {
             agent {
                 docker {

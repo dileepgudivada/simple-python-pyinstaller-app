@@ -1,7 +1,8 @@
-node{
-    stage('SCM Checkout'){
-           git 'https://github.com/dileepgudivada/simple-python-pyinstaller-app'
-    }
+pipeline {
+    agent docker
+    stages {
+        stage('Build') { 
+            agent {
     stages {
         stage('Build') {
             agent {
